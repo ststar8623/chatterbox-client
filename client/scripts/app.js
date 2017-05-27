@@ -40,13 +40,13 @@ var app = {
         $('#roomSelect').val(room).trigger('change');
       }
     });
-    app.fetchRooms();
-    app.fetch();
+    // app.fetchRooms();
+    // app.fetch();
 
     // // load pages every 1/10 of a sec
-    // setInterval(app.fetch, 100);
+    setInterval(app.fetch, 100);
     // // load rooms every 1 sec
-    // setInterval(app.fetchRoom, 1000);
+    setInterval(app.fetchRoom, 1000);
   },
   send: function(message) {
     $.ajax({
