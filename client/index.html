@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <title>chatterbox</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- dependencies -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/tether/dist/js/tether.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
       // YOU DO NOT NEED TO EDIT THIS CODE
       if (!/(&|\?)username=/.test(window.location.search)) {
@@ -23,25 +26,27 @@
     <script src="env/config.js"></script>
   </head>
   <body>
-    <div id="main">
-      <h1>chatterbox</h1>
+    <div id="main" class="container-fluid">
+      <div id="head">
+        <h1 id="header">chatterbox</h1>
+      </div>
       <!-- Your HTML goes here! -->
-      <div id='rooms'>
-        Room:
-        <select id="roomSelect">
+      <div id='rooms' class="row">
+        <a>Room:
+        <select id="roomSelect" class="btn btn-sm">
           <option value="blank"></option>
           <option id="option-create-room" SELECTED value="createRoom">Create a new room</option>
           <option value="lobby">lobby</option>
-          <input type="text" name="room" size="10" id="input-room-name"/>
+          <input type="text" name="room" id="input-room-name"/>
         </select>
       </div>
       <form action="#" id="send" method="post">
         Message:
-        <input type='text' name="message" id="message"/>
-        <button type="submit" name="submit" class="submit">Submit</button>
+        <input type='text' name="message" id="message" class="form-control"/>
+        <button type="submit" name="submit" class="submit btn btn-outline-primary btn-sm">Submit</button>
       </form>
     </div>
-    <div id="chats"></div>
+    <div id="chats" class="container-fluid"></div>
     <script src="scripts/app.js"></script>
   </body>
 </html>

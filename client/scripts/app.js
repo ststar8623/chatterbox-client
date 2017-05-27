@@ -102,7 +102,7 @@ var app = {
   },
   renderMessage: function(message) {
     // create html
-    let newMsg = $('<div class="chat">');
+    let newMsg = $('<div class="chat rounded">');
     newMsg.addClass('message');
     newMsg.append($('<span class="username">').text(message.username));
     newMsg.append($('<span class="text">').text(': ' + message.text));
