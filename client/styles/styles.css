@@ -5,12 +5,16 @@ body {
     font-family: arial, sans-serif;
 }
 
+h1 {
+    text-align: center;
+}
+
 #main, #chats {
     width: 500px;
     margin: auto;
     text-align: left;
     background: white;
-    padding: 50px 60px;
+    padding: 10px 60px;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
 }
@@ -65,8 +69,14 @@ form input[type=text] {
     background-color: #eee;
 }
 
-.chat .username {
+.chat > .username {
     font-weight: 800;
+    font-size: 14px;
+}
+
+.message {
+    padding-bottom: 20px;
+    font-size: 12px;
 }
 
 .chat:hover {
@@ -86,5 +96,14 @@ form input[type=text] {
 .friend {
     color: #fff;
     background-color: #0090da;
+}
+/* input */
+#userName {
+    width: 100px;
+    display: block;
+    margin-bottom: 10px;
+}
+#userMessage {
+    display: block;
 }
 

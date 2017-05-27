@@ -96,7 +96,7 @@ describe('chatterbox', function() {
 
     describe('events', function() {
       it('should add a friend upon clicking their username', function() {
-        sinon.spy(app, 'handleUsernameClick');
+        sinon.spy(app, 'addFriend');
 
         app.renderMessage({
           username: 'Mel Brooks',
@@ -107,9 +107,9 @@ describe('chatterbox', function() {
         app.init();
 
         $('#main').find('.username').trigger('click');
-        expect(app.handleUsernameClick.called).to.be.true;
+        expect(app.addFriend.called).to.be.true;
 
-        app.handleUsernameClick.restore();
+        app.addFriend.restore();
       });
 
       it('should try to send a message upon clicking submit', function() {
